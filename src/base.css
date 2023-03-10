@@ -1,0 +1,25 @@
+/* 边角料清除 */
+.clearfix::after,
+.clearfix::before {
+  display: table;
+  content: "";
+  clear: both;
+}
+/* body整个设置 */
+.body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+    min-width: 1140px;
+}
+/* 设置主体宽度和居中 */
+.w{
+  width: 1140px;
+  margin: 0px auto;
+}
+ul{
+  padding: 0px;
+}
+input{
+  padding: 0px;
+  border: none;
+}

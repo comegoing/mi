@@ -1,0 +1,565 @@
+/* 一、顶部导航 */
+/* 1.底座 */
+/* 设置最底层背景版 */
+.top {
+  width: 100%;
+  background-color: #333;
+}
+
+/* 设置底层内容区 */
+.top-background {
+  line-height: 40px;
+  height: 40px;
+  position: relative;
+  background-color: #333;
+}
+
+/* 2.左右侧盒子共同属性 */
+/* 左右侧列表横向排列 */
+.top-ul-left,
+.top-ul-right {
+  float: left;
+}
+
+/* 左右两侧li横向排列 */
+.top-background li {
+  font-size: 12px;
+  float: left;
+}
+
+/* 给“|”设置间距并浮动 */
+.ver-line {
+  font-size: 12px;
+  color: #444;
+  float: left;
+  margin: 0px 6px 0px 6px;
+}
+
+/* 设置top链接正常显示效果 */
+.top-background a {
+  display: block;
+  color: #888;
+}
+
+/* 设置top链接鼠标移入效果 */
+.top-background a:hover {
+  color: white;
+}
+
+/* 3.左侧盒子 */
+/* 左侧盒子定位 */
+.service {
+  position: absolute;
+  width: 900px;
+}
+
+/* 设置二维码主体块 */
+.download-box {
+  position: absolute;
+  left: 600px;
+  height: 140px;
+  width: 120px;
+  /* 通过此方法设置渐变生成展示效果 */
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s;
+  z-index: 100;
+  background-color: white;
+  text-align: center;
+  line-height: 1;
+  color: black;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 设置二维码上方小三角 */
+.download::after {
+  display: none;
+  content: "";
+  position: absolute;
+  z-index: 100;
+  width: 0px;
+  height: 0px;
+  border: transparent 10px solid;
+  border-color: transparent transparent white transparent;
+  left: 650px;
+  top: 30px;
+}
+
+/* 设置二维码内部图片 */
+.download-box img {
+  width: 80px;
+  margin: 20px 20px 10px;
+}
+
+/* 鼠标移入二维码效果 */
+.download:hover .download-box {
+  display: block;
+  height: 140px;
+}
+
+/* 鼠标移入小三角效果 */
+.download:hover::after {
+  display: block;
+}
+
+/* 4.右侧盒子 */
+/* 右侧盒子定位 */
+.user-info {
+  position: absolute;
+  width: 240px;
+  left: 900px;
+}
+
+/* 限制右侧列表大小 */
+.top-ul-right {
+  width: 140px;
+}
+
+/* 设置购物车 */
+.shopping {
+  font-size: 12px;
+  float: left;
+  background-color: #444;
+  color: #888;
+  width: 100px;
+}
+
+/* 单独设置购物车链接正常效果 */
+.shopping a {
+  line-height: 40px;
+  text-align: center;
+}
+
+/* 设置购物车下白色弹出框 */
+.shopping-box {
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  left: -160px;
+  top: 40px;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.3);
+  border-top: none;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s;
+  line-height: 100px;
+  text-align: center;
+  color: #f70;
+  z-index: 100;
+}
+
+/* 设置鼠标移入白色弹出框显示效果 */
+.shopping:hover .shopping-box,
+.shopping:hover a {
+  display: block;
+  height: 100px;
+}
+.shopping a:hover,
+.shopping:hover a {
+  color: #f70;
+  background-color: white;
+}
+
+/* 二、中间搜索层 */
+/* 1.底座 */
+/* 设置最底层背景板 */
+header {
+  height: 100px;
+}
+/* 设置底层内容区 */
+.middle-background {
+  position: relative;
+}
+
+/* 2.左侧盒子 */
+/* 设置左侧盒子 */
+.middle-left {
+  position: absolute;
+  height: 100px;
+  width: 50px;
+  overflow: hidden;
+}
+
+/* 设置左侧链接正常效果 */
+.middle-left a {
+  position: absolute;
+  color: #f70;
+  height: 50px;
+  width: 50px;
+  margin: 25px 0px;
+  background-size: contain;
+}
+
+/* 设置非亮按钮链接背景 */
+.none-light {
+  background-image: url("./src/img/logo1.png");
+}
+
+/* 设置亮按钮链接背景 */
+.light {
+  width: 0px;
+  transition: left 0.3s;
+  left: -50px;
+  background-image: url("./src/img/logo2.png");
+}
+
+/* 设置鼠标移入按钮链接效果 */
+.middle-left:hover .light {
+  width: 50px;
+  left: 0px;
+}
+
+/* 3.中间导航盒子 */
+/* 设置中间导航盒子 */
+.middle-center {
+  position: absolute;
+  height: 100px;
+  width: 750px;
+  left: 100px;
+}
+
+/* 设置展示信息 */
+.goods-info {
+  height: 100px;
+  padding: 0px;
+  line-height: 100px;
+}
+
+/* 让展示信息下的li横向排列 */
+.middle-center li {
+  float: left;
+  margin: 0px 10px;
+}
+
+/* 让展示信息下的第一个li不显示，但占用位置 */
+.middle-center li:first-child {
+  visibility: hidden;
+}
+
+/* 设置中间导航链接正常效果 */
+.middle-center li a {
+  display: block;
+  color: black;
+}
+
+/* 设置中间链接鼠标移入效果 */
+.middle-center li a:hover {
+  color: #f70;
+}
+
+/* 设置goods弹出框 */
+.goods-box {
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s;
+  width: 1140px;
+  background-color: white;
+  top: 99px;
+  left: -100px;
+  z-index: 100;
+}
+
+/* 设置鼠标移入goods弹出框链接效果 */
+.middle-center .show-goods:hover ~ .goods-box,
+.goods-box:hover {
+  display: block;
+  height: 200px;
+  border-top: 2px solid rgb(244, 244, 244);
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 4.右侧搜索框盒子 */
+/* 设置右侧搜索框底层盒子 */
+.middle-right {
+  position: absolute;
+  height: 100px;
+  width: 240px;
+  left: 900px;
+}
+
+/* 设置右侧搜索框盒子 */
+.search-box {
+  margin-top: 34px;
+  height: 30px;
+  width: 200px;
+  border: 1px solid #eee;
+}
+
+/* 设置搜索框 */
+.search {
+  padding-left: 10px;
+  float: left;
+  height: 30px;
+  width: 159px;
+  border-right: 1px solid #eee;
+}
+
+/* 设置搜索框鼠标移入效果 */
+.search:hover,
+.search:hover ~ .enter {
+  outline: 1px solid #999;
+}
+
+/* 设置搜索框鼠标焦点效果 */
+.search:focus,
+.search:focus ~ .enter {
+  outline: 1px solid #f70;
+}
+
+/* 设置按钮 */
+.enter {
+  float: left;
+  height: 30px;
+  width: 30px;
+  padding: 0px;
+  border: none;
+  color: #616161;
+  background-color: white;
+  box-sizing: content-box;
+  font-size: 18px;
+
+  transition: background-color 0.3s;
+}
+
+/* 设置按钮鼠标移入效果 */
+.enter:hover {
+  color: white;
+  background-color: #f70;
+  outline: #f70 solid 1px;
+}
+
+/* 三、主要内容区 */
+/* 1.设置最底层背景 */
+main {
+  height: 500px;
+}
+/* 设置底层内容背景 */
+.body-background {
+  height: 500px;
+}
+
+/* 2.设置左侧盒子 */
+.body-info {
+  float: left;
+  width: 200px;
+  height: 500px;
+  background-color: #444;
+}
+
+/* 设置左侧列表 */
+.body-info ul {
+  position: relative;
+  margin: 20px 0px 20px 0px;
+  height: 460px;
+}
+
+/* 设置左侧列表中li */
+.body-info li {
+  line-height: 46px;
+  height: 46px;
+  font-size: 14px;
+}
+
+/* 设置左侧列表中a链接 */
+.body-info li a {
+  padding-left: 20px;
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 设置左侧列表鼠标移入效果 */
+.body-info li:hover {
+  background-color: #f70;
+}
+
+/* 设置左侧列表图标字体 */
+.body-info li i {
+  color: #bbb;
+  line-height: 46px;
+  position: absolute;
+  left: 180px;
+}
+
+/* 3.设置主体内容 */
+.body-img {
+  position: relative;
+  float: left;
+  width: 940px;
+  height: 500px;
+  background-color: #bfa;
+}
+
+/* 设置背景图片底层盒子 */
+.content-img {
+  height: 500px;
+  width: 940px;
+  background-color: red;
+}
+
+/* 将所有背景图片重叠 */
+.content-img li {
+  position: absolute;
+}
+
+/* 设置背景图片可全屏点击 */
+.content-img li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/* 设置背景图片大小 */
+.content-img li a img {
+  width: 940px;
+  height: 500px;
+}
+
+/* 设置小点底层背景 */
+.point {
+  position: absolute;
+  top: 470px;
+  left: 850px;
+  z-index: 100;
+}
+
+/* 设置单个小点背景 */
+.point li {
+  margin: 0px 4px;
+  float: left;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #999;
+  border: 3px solid #566;
+}
+
+/* 设置小点可点击内容 */
+.point a {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+}
+
+/* 设置小点鼠标移入效果 */
+.point li:hover {
+  background-color: #fff;
+  border: 3px solid #bbb;
+}
+
+.photo2 {
+  z-index: 1;
+}
+
+/* 五、底部内容区 */
+/* 1.底座 */
+footer {
+  margin-top: 20px;
+  height: 201px;
+}
+
+/* 设置底层内容背景 */
+.bottom-background {
+  height: 200px;
+}
+
+/* 2.设置左侧小工具栏 */
+.small-info {
+  float: left;
+  width: 240px;
+  background-color: #5f5750;
+  height: 200px;
+}
+
+/* 设置上下列表 */
+.top-info,
+.bottom-info {
+  height: 100px;
+  width: 240px;
+}
+
+/* 设置列表内容li横向排列 */
+.service-info {
+  width: 80px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 1px solid #566;
+  float: left;
+}
+
+/* 设置li中链接正常效果 */
+.service-info a {
+  color: #ccc;
+  text-align: center;
+  display: block;
+  height: 100px;
+  width: 80px;
+}
+
+/* 设置li中图标字体 */
+.small-info i {
+  display: block;
+  height: 70px;
+  width: 80px;
+  line-height: 70px;
+  font-size: 25px;
+}
+
+/* 设置li中内容鼠标移入效果 */
+.small-info a:hover {
+  color: white;
+}
+
+/* 3.设置右侧推荐图片 */
+.extra-goods {
+  float: left;
+  width: 900px;
+  height: 200px;
+}
+
+/* 设置列表背景 */
+.extra-goods ul {
+  width: 900px;
+  height: 200px;
+}
+
+/* 设置列表下li的内容 */
+.extra-goods li {
+  transition: box-shadow 0.3s;
+  float: left;
+  margin-left: 10px;
+  width: 290px;
+  height: 200px;
+}
+
+/* 设置li中链接正常效果 */
+.extra-goods a {
+  display: block;
+  width: 290px;
+  height: 200px;
+}
+
+/* 设置li中图片内容 */
+.extra-goods img {
+  width: 290px;
+  height: 200px;
+}
+
+/* 设置li下链接鼠标移入效果 */
+.extra-goods li:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 四、右侧快捷栏 */
+.txt-info {
+  height: 200px;
+  width: 30px;
+  background-color: #bfa;
+  position: fixed;
+  bottom: 40px;
+  right: 50%;
+  z-index: 100;
+  margin-right: -600px;
+}
